@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
 import Homepage from './Homepage';
-import Sidebar from './components/Sidebar';
 import { BrowserRouter } from "react-router-dom"
-import { Header } from "./siteTools/header"
+
 import { Footer } from "./siteTools/footer"
 import backgroundImage from './background-image.jpg'; // Import your background image here
 
@@ -25,8 +24,8 @@ root.render(
   <React.StrictMode>
     <div style={styles}>
       <BrowserRouter>
-        <Header />
-        <Sidebar />
+
+
         <Homepage />
         <Footer />
       </BrowserRouter>
