@@ -9,7 +9,9 @@ export function Header() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderRadius: '0 0 10px 10px'
+    borderRadius: '0 0 10px 10px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
+
   };
 
   const headerLeftStyle = {

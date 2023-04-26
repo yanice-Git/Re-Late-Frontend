@@ -27,7 +27,7 @@ body {
     height: 100%;
     margin: 2rem auto;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     margin: 0;
     flex-direction: column;
 
@@ -128,6 +128,7 @@ button {
     width: 1px;
     background-color: hsl(235, 50%, 74%);
     transition: background-color 100ms ease-in-out;
+
 }
 
 .hide {
@@ -230,8 +231,11 @@ button {
 
 .Sidebar {
     height: 100%;
-    width: 200px;
+    width: 300px;
     background-color: #2F4050;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+
 
 }
 
@@ -269,8 +273,22 @@ button {
     flex: 30%;
     display: gird;
     align-items: center;
+    padding-left: 10px;
 }
 
 .row #title {
     flex: 70%;
+}
+
+.ForumPost {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0em 0em;
+    color: white;
+    text-decoration: none;
+    transition: padding 0.15s;
+}
+
+.ForumPost:hover {
+    padding-top: calc(2px + .5px);
+    font-weight: var(--bold)
 }

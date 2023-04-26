@@ -1,6 +1,7 @@
 import { getPosts } from "../services/posts"
 import { Link } from "react-router-dom"
 import { useAsync } from "../hooks/useAsync"
+import '../styles.css';
 
 export function PostList() {
     const { loading, error, value: posts } = useAsync(getPosts)
@@ -9,7 +10,7 @@ export function PostList() {
     if (error) return <h1>className="error-msg"</h1>
     return posts.map(post => {
         return (
-            <h1 key={post.id}>
+            <h1 className="ForumPost" key={post.id}>
                 <Link to={`/posts/${post.id}`} > {post.title}</Link>
             </h1 >
         )
