@@ -1,30 +1,22 @@
 import React from 'react'
 import "../styles.css"
-import { SidebarData } from "./SidebarData"
+//import { SidebarData } from "./SidebarData"
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
     return (
         <div className="Sidebar">
             <ul className='SidebarList'>
-                {SidebarData.map((val, key) => {
-                    return (
-                        <li
-                            key={key}
-                            className="row"
-                            id={window.location.pathname == val.link ? "active" : ""}
-                            onClick={() => {
-                                window.location.pathname = val.link;
-                            }}
-                        >
-                            <div id='icon'>
-                                {val.icon}</div>
-                            <div id='title'>
-                                {val.titles}
-                            </div>
+                <li className="row">
+                    <Link to="/" className="Sidebarlist.row">Home </Link>
 
-                        </li>
-                    );
-                })}
+                </li>
+                <li className="row">
+                    <Link to="/profiles" className="Sidebarlist.row">Members</Link>
+                </li>
+                <li className="row">
+                    <Link to="/" className="Sidebarlist.row">Categories </Link>
+                </li>
             </ul>
         </div>
     );

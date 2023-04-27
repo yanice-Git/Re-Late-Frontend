@@ -10,9 +10,11 @@ export function Header() {
     alignItems: 'center',
     justifyContent: 'space-between',
     borderRadius: '0 0 10px 10px',
+    textShadow: '4px 5px 5px rgba(0, 0, 0, 0.7)',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)'
-
   };
+
+
 
   const headerLeftStyle = {
     display: 'flex',

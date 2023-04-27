@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
-import Homepage from './Homepage';
+import App from './App';
 import { BrowserRouter } from "react-router-dom"
 
 import { Footer } from "./siteTools/footer"
-import backgroundImage from './background-image.jpg'; // Import your background image here
-
+import backgroundImage from './images/background-image.jpg'; // Import your background image here
 
 const styles = {
   backgroundImage: `url(${backgroundImage})`,
@@ -24,9 +23,7 @@ root.render(
   <React.StrictMode>
     <div style={styles}>
       <BrowserRouter>
-
-
-        <Homepage />
+        <App />
         <Footer />
       </BrowserRouter>
     </div>
