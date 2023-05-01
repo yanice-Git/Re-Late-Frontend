@@ -9,8 +9,14 @@ export function usePost() {
     return useContext(Context)
 }
 
-export function ProfileProvider({ children }) {
+export function PostProvider({ children }) {
     const { id } = useParams()
+    console.log("id is:", id);
+    if (id === undefined) {
+        console.log("True");
+    }
+
+    console.log(id)
     const { loading, error, value: post } = useAsync(() => getPost(id), [id])
     const [comments, setComments] = useState([])
     const commentsByParentId = useMemo(() => {

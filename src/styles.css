@@ -34,7 +34,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 100%;
     /*width: calc(100vw - 4rem);*/
     height: 100%;
     margin: 2rem auto;
@@ -46,7 +46,7 @@ body {
 
 .posts {
     max-width: 1200px;
-    width: calc(100vw - 4rem);
+    width: 900px;
     height: 100%;
     margin: 2rem auto;
     display: flex;
@@ -262,6 +262,25 @@ button {
     --color: hsl(var(--hue), 20%, 74%);
 }
 
+.PageTag {
+    padding: 10px;
+    background-color: aliceblue;
+    border-top-right-radius: 50%, 2%;
+    border-bottom-right-radius: 10%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    -webkit-border-top-right-radius: 50px 30px;
+    -webkit-border-bottom-right-radius: 50px 30px;
+    -webkit-animation: bounce 1s infinite;
+    /* Chrome10+, Safari5.1+ */
+
+    background:
+        linear-gradient(to right bottom, aliceblue 0%)
+}
+
+
+
+
+
 .Sidebar {
     height: 100%;
     width: 300px;
@@ -336,14 +355,132 @@ li .row {
 }
 
 .ForumPost {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0em 0em;
     color: white;
+    text-shadow: 1px 1px 2px #293846;
     text-decoration: none;
     transition: padding 0.15s;
 }
 
+
 .ForumPost:hover {
     padding-top: calc(2px + .5px);
     font-weight: var(--bold)
+}
+
+.welcome {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ball {
+    --size: 50px;
+    --bounceHeight: 120px;
+    --duration: .4s;
+    width: var(--size);
+    height: var(--size);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    perspective: 1000px;
+}
+
+/* bouncing */
+.ball::before {
+    content: '';
+    display: block;
+    width: inherit;
+    height: inherit;
+    background: radial-gradient(ellipse at 30% 20%, LightSalmon, transparent 40%),
+        radial-gradient(circle at -20% -30%, tomato 60%, darkred);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1) inset;
+    animation: bounce var(--duration) infinite alternate cubic-bezier(1, 0, .8, .9);
+}
+
+/* shadow */
+.ball::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: inherit;
+    height: 20%;
+    color: #CCC;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: translateY(var(--bounceHeight)) scale(.8);
+    animation: bounceShadow var(--duration) infinite alternate cubic-bezier(1, 0, .8, .9);
+}
+
+@keyframes bounce {
+    85% {
+        transform: translateY(calc(var(--bounceHeight) - 3px));
+    }
+
+    86% {
+        transform: translateY(calc(var(--bounceHeight) - 3px)) scale(1.1, .9);
+    }
+
+    100% {
+        transform: translateY(var(--bounceHeight)) scale(1.4, .5);
+    }
+}
+
+@keyframes bounceShadow {
+    0% {
+        box-shadow: 0 0 10px 8px currentColor;
+        color: #EEE;
+    }
+
+    90% {
+        box-shadow: 0 0 3px 3px currentColor;
+    }
+
+    91% {
+        box-shadow: 0 0 2px 2px currentColor;
+    }
+
+    100% {
+        box-shadow: 0 0 0px currentColor;
+    }
+}
+
+.overflowView {
+    overflow: auto;
+    height: 400px;
+    width: 400px;
+    border-radius: 4%;
+    background-color: white;
+}
+
+.overflowView::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+.overflowView::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+    border-radius: 1em;
+}
+
+.overflowbox {
+    border: 1px solid #ddd;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
+    padding: 10px;
+    margin: 10px;
+    height: 600px;
+    width: 450px;
+    border-radius: 2%;
+
+}
+
+.overflowbox h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
 }

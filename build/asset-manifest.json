@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b70c795d.css",
-    "main.js": "/static/js/main.bb741f1e.js",
+    "main.css": "/static/css/main.fdb99431.css",
+    "main.js": "/static/js/main.a73c5c34.js",
     "static/media/background-image.jpg": "/static/media/background-image.a18061c748653f86a024.jpg",
     "static/media/heliotherapy.ico": "/static/media/heliotherapy.09917b7463ab79a0f375.ico",
     "index.html": "/index.html",
-    "main.b70c795d.css.map": "/static/css/main.b70c795d.css.map",
-    "main.bb741f1e.js.map": "/static/js/main.bb741f1e.js.map"
+    "main.fdb99431.css.map": "/static/css/main.fdb99431.css.map",
+    "main.a73c5c34.js.map": "/static/js/main.a73c5c34.js.map"
   },
   "entrypoints": [
-    "static/css/main.b70c795d.css",
-    "static/js/main.bb741f1e.js"
+    "static/css/main.fdb99431.css",
+    "static/js/main.a73c5c34.js"
   ]
 }

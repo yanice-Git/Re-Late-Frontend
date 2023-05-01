@@ -7,3 +7,7 @@ export function getPosts() {
 export function getPost(id) {
     return makeRequest(`/posts/${id}`)
 }
+
+export function getFeatured() {
+    return makeRequest('/featured')
+}

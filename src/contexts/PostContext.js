@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useAsync } from "../hooks/useAsync"
-import { getPost } from "../services/posts"
+import { getFeatured, getPost } from "../services/posts"
 
 const Context = React.createContext()
 
@@ -10,7 +10,18 @@ export function usePost() {
 }
 
 export function PostProvider({ children }) {
-    const { id } = useParams()
+    const { id: initialId } = useParams()
+    const [id, setId] = useState(initialId)
+
+    useEffect(() => {
+        if (initialId === undefined) {
+            (async () => {
+                const featuredPost = await getFeatured()
+                setId(featuredPost.id)
+            })()
+        }
+    }, [initialId])
+
     const { loading, error, value: post } = useAsync(() => getPost(id), [id])
     const [comments, setComments] = useState([])
     const commentsByParentId = useMemo(() => {
@@ -92,7 +103,7 @@ export function PostProvider({ children }) {
             }}
         >
             {loading ? (
-                <h1>Loading</h1>
+                <div className="ball" />
             ) : error ? (
                 <h1 className="error-msg">{error}</h1>
             ) : (

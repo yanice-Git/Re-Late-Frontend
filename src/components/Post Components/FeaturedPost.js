@@ -1,10 +1,10 @@
-import { usePost } from "../contexts/PostContext"
-import { useAsyncFn } from "../hooks/useAsync"
-import { createComment } from "../services/comments"
-import { CommentForm } from "./CommentForm"
-import { CommentList } from "./CommentList"
+import { usePost } from "../../contexts/FeaturedPostContext"
+import { useAsyncFn } from "../../hooks/useAsync"
+import { createComment } from "../../services/comments"
+import { CommentForm } from "../CommentForm"
+import { CommentList } from "../CommentList"
 
-export function Post() {
+export function FeaturedPost() {
     const { post, rootComments, createLocalComment } = usePost()
     const { loading, error, execute: createCommentFn } = useAsyncFn(createComment)
 
@@ -34,3 +34,4 @@ export function Post() {
         </>
     )
 }
+
