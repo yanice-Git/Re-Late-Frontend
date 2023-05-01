@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import { Header } from "./siteTools/header"
 import { ProfileList } from "./components/Profile Components/ProfileList";
 import { Homepage } from "./pages/homepage"
+import {Login} from "./pages/Login"
 import './styles.css';
 
 
@@ -19,7 +20,7 @@ function App() {
         <Sidebar />
         <div className="posts">
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={<Login />} />
             <Route path="/profiles" element={<ProfileList />} />
             <Route path="/profiles/:id" element={<ProfileProvider> <ProfileList /></ProfileProvider>} />
             <Route path="/posts/:id" element={<PostProvider> <Post /></PostProvider>} />
