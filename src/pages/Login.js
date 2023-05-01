@@ -1,5 +1,5 @@
 import React from 'react';
-import '../login.css';
+import '../styles/login.css';
 import Button from '../components/loginpagecomponents/Button';
 
 export function Login() {
