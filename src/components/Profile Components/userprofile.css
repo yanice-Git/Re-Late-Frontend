@@ -1,0 +1,48 @@
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+div .profile {
+    border-color: black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+div .userbox {
+    width: 300px;
+    height: 600px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div .userinfo {
+    width: 300px;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+div .userbio {
+    width: 300px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+div .userbio h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+div .userbio p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
